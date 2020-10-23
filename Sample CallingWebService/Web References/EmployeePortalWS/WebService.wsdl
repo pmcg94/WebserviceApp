@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="ReturnClockinCheck">
+        <s:complexType />
+      </s:element>
+      <s:element name="ReturnClockinCheckResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ReturnClockinCheckResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Clockins_Home_Server">
+        <s:complexType />
+      </s:element>
+      <s:element name="Get_Clockins_Home_ServerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_Clockins_Home_ServerResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_SQL_Queries_For_Home_Server">
+        <s:complexType />
+      </s:element>
+      <s:element name="Get_SQL_Queries_For_Home_ServerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_SQL_Queries_For_Home_ServerResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DropExtTablesThenTransfer">
+        <s:complexType />
+      </s:element>
+      <s:element name="DropExtTablesThenTransferResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="SendQueryToDb123">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="query" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="showerrors" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendQueryToDb123Response">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetDataTableWS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="stringSQL" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataTableWSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDataTableWSResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateSQLTableFromDataTable">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dt">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="TableName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="BatchMode" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateSQLTableFromDataTableResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ReturnClockinCheckSoapIn">
+    <wsdl:part name="parameters" element="tns:ReturnClockinCheck" />
+  </wsdl:message>
+  <wsdl:message name="ReturnClockinCheckSoapOut">
+    <wsdl:part name="parameters" element="tns:ReturnClockinCheckResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_Clockins_Home_ServerSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_Clockins_Home_Server" />
+  </wsdl:message>
+  <wsdl:message name="Get_Clockins_Home_ServerSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_Clockins_Home_ServerResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_SQL_Queries_For_Home_ServerSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_SQL_Queries_For_Home_Server" />
+  </wsdl:message>
+  <wsdl:message name="Get_SQL_Queries_For_Home_ServerSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_SQL_Queries_For_Home_ServerResponse" />
+  </wsdl:message>
+  <wsdl:message name="DropExtTablesThenTransferSoapIn">
+    <wsdl:part name="parameters" element="tns:DropExtTablesThenTransfer" />
+  </wsdl:message>
+  <wsdl:message name="DropExtTablesThenTransferSoapOut">
+    <wsdl:part name="parameters" element="tns:DropExtTablesThenTransferResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendQueryToDb123SoapIn">
+    <wsdl:part name="parameters" element="tns:SendQueryToDb123" />
+  </wsdl:message>
+  <wsdl:message name="SendQueryToDb123SoapOut">
+    <wsdl:part name="parameters" element="tns:SendQueryToDb123Response" />
+  </wsdl:message>
+  <wsdl:message name="GetDataTableWSSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDataTableWS" />
+  </wsdl:message>
+  <wsdl:message name="GetDataTableWSSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDataTableWSResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateSQLTableFromDataTableSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateSQLTableFromDataTable" />
+  </wsdl:message>
+  <wsdl:message name="CreateSQLTableFromDataTableSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateSQLTableFromDataTableResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WebServiceSoap">
+    <wsdl:operation name="ReturnClockinCheck">
+      <wsdl:input message="tns:ReturnClockinCheckSoapIn" />
+      <wsdl:output message="tns:ReturnClockinCheckSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Clockins_Home_Server">
+      <wsdl:input message="tns:Get_Clockins_Home_ServerSoapIn" />
+      <wsdl:output message="tns:Get_Clockins_Home_ServerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_SQL_Queries_For_Home_Server">
+      <wsdl:input message="tns:Get_SQL_Queries_For_Home_ServerSoapIn" />
+      <wsdl:output message="tns:Get_SQL_Queries_For_Home_ServerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DropExtTablesThenTransfer">
+      <wsdl:input message="tns:DropExtTablesThenTransferSoapIn" />
+      <wsdl:output message="tns:DropExtTablesThenTransferSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendQueryToDb123">
+      <wsdl:input message="tns:SendQueryToDb123SoapIn" />
+      <wsdl:output message="tns:SendQueryToDb123SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataTableWS">
+      <wsdl:input message="tns:GetDataTableWSSoapIn" />
+      <wsdl:output message="tns:GetDataTableWSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateSQLTableFromDataTable">
+      <wsdl:input message="tns:CreateSQLTableFromDataTableSoapIn" />
+      <wsdl:output message="tns:CreateSQLTableFromDataTableSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebServiceSoap" type="tns:WebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ReturnClockinCheck">
+      <soap:operation soapAction="http://tempuri.org/ReturnClockinCheck" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Clockins_Home_Server">
+      <soap:operation soapAction="http://tempuri.org/Get_Clockins_Home_Server" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_SQL_Queries_For_Home_Server">
+      <soap:operation soapAction="http://tempuri.org/Get_SQL_Queries_For_Home_Server" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DropExtTablesThenTransfer">
+      <soap:operation soapAction="http://tempuri.org/DropExtTablesThenTransfer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendQueryToDb123">
+      <soap:operation soapAction="http://tempuri.org/SendQueryToDb123" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataTableWS">
+      <soap:operation soapAction="http://tempuri.org/GetDataTableWS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateSQLTableFromDataTable">
+      <soap:operation soapAction="http://tempuri.org/CreateSQLTableFromDataTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebServiceSoap12" type="tns:WebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ReturnClockinCheck">
+      <soap12:operation soapAction="http://tempuri.org/ReturnClockinCheck" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Clockins_Home_Server">
+      <soap12:operation soapAction="http://tempuri.org/Get_Clockins_Home_Server" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_SQL_Queries_For_Home_Server">
+      <soap12:operation soapAction="http://tempuri.org/Get_SQL_Queries_For_Home_Server" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DropExtTablesThenTransfer">
+      <soap12:operation soapAction="http://tempuri.org/DropExtTablesThenTransfer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendQueryToDb123">
+      <soap12:operation soapAction="http://tempuri.org/SendQueryToDb123" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataTableWS">
+      <soap12:operation soapAction="http://tempuri.org/GetDataTableWS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateSQLTableFromDataTable">
+      <soap12:operation soapAction="http://tempuri.org/CreateSQLTableFromDataTable" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebService">
+    <wsdl:port name="WebServiceSoap" binding="tns:WebServiceSoap">
+      <soap:address location="https://employee.blocblinds.com/WebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebServiceSoap12" binding="tns:WebServiceSoap12">
+      <soap12:address location="https://employee.blocblinds.com/WebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
